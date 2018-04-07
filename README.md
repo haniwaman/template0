@@ -1,1 +1,5 @@
-# template0
+# command
+
+`$ npm install`
+
+`$ gulp watch`
