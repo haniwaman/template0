@@ -1,0 +1,38 @@
+.inner {
+
+	margin: 0 auto;
+
+	@include mq("pc") {
+		width: $layout-width-inner;
+	}
+}
+
+#header,
+#content,
+#footer {
+	width: 100%;
+}
+
+#content .inner {
+
+	@include mq("pc") {
+		display: flex;
+	}
+}
+
+#main {
+
+	@include mq("pc") {
+		width: $layout-width-main;
+		margin-right: 2em;
+	}
+}
+
+#side {
+	padding: 0 12px;
+
+	@include mq("pc") {
+		width: $layout-width-side;
+		padding: 0;
+	}
+}

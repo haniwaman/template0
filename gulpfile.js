@@ -1,11 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssdeclsort = require('css-declaration-sorter');
 var mqpacker = require('css-mqpacker');
-var browsersync = require('browser-sync');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 
