@@ -29,7 +29,7 @@ img {
 
 p {
 	padding: 0;
-	margin: 0 0 1.5em 0;
+	margin: 0;
 }
 
 code,
@@ -40,11 +40,6 @@ samp {
 	font-size: 1em;
 }
 
-pre {
-	margin-bottom: 1.5em;
-
-}
-
 pre code {
 	font-size: 1em;
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -52,7 +47,7 @@ pre code {
 
 ul,
 ol {
-	margin: 0 0 1.5em 0;
+	margin: 0;
 	padding: 0 0 0 20px;
 }
 
@@ -61,7 +56,7 @@ table {
 	border-spacing: 0;
 	width: 100%;
 	table-layout: fixed;
-	margin-bottom: 1.5em;
+	margin: 0;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -74,11 +69,12 @@ td {
 }
 
 blockquote {
-	margin: 0 1em 1.5em;
+	margin: 0 1em;
 }
 
 form {
-	margin-bottom: 1.5em;
+	margin: 0;
+	padding: 0;
 }
 
 input,
@@ -92,45 +88,48 @@ textarea {
 	-webkit-appearance: none;
 }
 
-input:focus {
-	outline: none;
-	border: 1px solid $color-accent;
-	box-shadow: 0 0 5px 0 $color-accent;
-}
+input {
 
-input[type="submit"] {
-
-	&:hover,
 	&:focus {
 		outline: none;
-		cursor: pointer;
+		border: 1px solid $color-accent;
+		box-shadow: 0 0 5px 0 $color-accent;
 	}
 
-	::-moz-focus-inner {
-		padding: 0;
+	&[type="submit"] {
+
+		&:hover,
+		&:focus {
+			outline: none;
+			cursor: pointer;
+		}
+
+		::-moz-focus-inner {
+			padding: 0;
+			border: none;
+		}
+	}
+
+	&[type="radio"] {
+
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 8px 0 0;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 		border: none;
+
+		&:focus,
+		&:checked {
+			outline: none;
+			border: 1px solid #fff;
+			box-shadow: 0 0 0 1px $color-accent;
+			background: $color-accent;
+		}
 	}
 
-}
-
-input[type="radio"] {
-
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 8px 0 0;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-	border: none;
-
-	&:focus,
-	&:checked {
-		outline: none;
-		border: 1px solid #fff;
-		box-shadow: 0 0 0 1px $color-accent;
-		background: $color-accent;
-	}
 }
 
 select {
@@ -156,4 +155,3 @@ select {
 		box-shadow: none;
 	}
 }
-
