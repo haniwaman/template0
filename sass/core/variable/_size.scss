@@ -1,16 +1,18 @@
+// レイアウト幅
 $layout-width-inner : 1104px;
 $layout-width-main  : 768px;
 $layout-width-side  : 336px;
 
+// ブレークポイント
 $breakpoints: (
 	"tab" : "screen and (min-width: 425px)",
 	"pc"  : "screen and (min-width: 768px)",
 );
 
+// ヘッダー高さ（sp）
 $header-height: 62px;
 
-$widget-side: 18px;
-
+// z-index の指定
 $layer: (
 	modal    : 100,
 	floating : 30,

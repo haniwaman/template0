@@ -1,3 +1,4 @@
+// メディアクエリー
 @mixin mq($breakpoint: sp) {
 
 	@media #{map-get($breakpoints, $breakpoint)} {
@@ -6,6 +7,7 @@
 	}
 }
 
+// float 解除
 @mixin clearfix {
 
 	&::after {
@@ -15,16 +17,18 @@
 	}
 }
 
+// px → rem 変換
 @function rem($pixcels, $context: $baseFontSize) {
 	@return $pixels / $content * 1rem;
 }
 
+// リンクのアローアイコン
 @mixin linkIcon($color: #333) {
 	&::before {
 		content: "";
 		position: absolute;
 		top: 50%;
-		right: 15px;
+		right: 12px;
 		width: 10px;
 		height: 10px;
 		margin-top: -7px;
@@ -34,6 +38,33 @@
 	}
 }
 
+// リンクのアイコン（Font Awesome）
+@mixin linkIconFA($icon: '\f105', $family: 'Font Awesome 5 Free') {
+	&::before {
+		content: $icon;
+		position: absolute;
+		font-family: $family;
+		font-weight: 900;
+		top: 50%;
+		right: 12px;
+		transform: translateY(-50%);
+	}
+}
+
+// リストスタイル
+@mixin listStyle($src: '../img/noimage.png', $width: 6px, $height: 6px) {
+	&::before {
+		content: "";
+		background: url($src) no-repeat center left / contain;
+		display: inline-block;
+		height: $width;
+		width: $height;
+		margin-right: 8px;
+		vertical-align: middle;
+	}
+}
+
+// iframeのレスポンシブ化
 @mixin rwd_iframe($width: 16, $height: 9) {
 	position: relative;
 	padding-top: percentage($height / $width);
