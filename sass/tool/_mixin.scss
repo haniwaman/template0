@@ -5,3 +5,31 @@
 		@content;
 	}
 }
+
+@mixin clearfix {
+
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@function rem($pixcels, $context: $baseFontSize) {
+	@return $pixels / $content * 1rem;
+}
+
+@mixin linkIcon($color: #333) {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		width: 10px;
+		height: 10px;
+		margin-top: -7px;
+		border-top: 3px solid $color;
+		border-right: 3px solid $color;
+		transform: rotate(45deg);
+	}
+}
