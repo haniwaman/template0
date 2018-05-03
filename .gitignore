@@ -1,7 +1,6 @@
 img/
 node_modules/
 capture/
-css/
 package-lock.json
 index.html
 .vscode/
