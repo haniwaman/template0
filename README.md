@@ -6,6 +6,8 @@
 
 `$ npm install`
 
+`$ gulp`
+
 # My Memo
 
 `$ git remote add origin https://github.com/haniwaman/template0.git`
