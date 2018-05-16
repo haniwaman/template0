@@ -15,3 +15,5 @@
 `$ git remote -v`
 
 `$ git pull origin master`
+
+`$ git remote rm origin`
