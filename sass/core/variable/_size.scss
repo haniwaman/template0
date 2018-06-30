@@ -6,7 +6,7 @@ $layout-width-side  : 336px;
 // ブレークポイント
 $breakpoints: (
 	"sp"  : "screen and (max-width: 425px)",
-	"tab" : "screen and (min-width: 426px)",
+	"tab" : "screen and (min-width: 768px)",
 	"pc"  : "screen and (min-width: 980px)",
 );
 
