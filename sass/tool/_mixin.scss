@@ -17,6 +17,11 @@
 	}
 }
 
+// 倍率変更
+@function scale($size, $scale: 1) {
+	@return $size * $scale;
+}
+
 // px → rem 変換
 @function rem($pixcels, $context: $baseFontSize) {
 	@return $pixels / $content * 1rem;
