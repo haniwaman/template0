@@ -81,3 +81,19 @@
 		height: 100%;
 	}
 }
+
+// 倍率変更
+@function scale($size, $scale: 1) {
+	@return $size * $scale;
+}
+
+@mixin linit {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+// 割り算
+@function division($size, $size2) {
+	@return $size / $size2;
+}
