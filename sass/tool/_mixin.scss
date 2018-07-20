@@ -105,3 +105,15 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+// 上下中央
+@mixin abv {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// 左右中央
+@mixin abh {
+	left: 50%;
+	transform: translateX(-50%);
+}
