@@ -3,6 +3,7 @@ var sass         = require('gulp-sass');
 var plumber      = require('gulp-plumber');
 var notify       = require('gulp-notify');
 var sassGlob     = require('gulp-sass-glob');
+var mmq          = require('gulp-merge-media-queries');
 var browserSync  = require('browser-sync');
 
 var postcss      = require('gulp-postcss');
@@ -18,6 +19,7 @@ gulp.task('sass', function() {
 		.pipe(postcss([autoprefixer()]))
 		.pipe(postcss([cssdeclsort({order: 'alphabetically'})]))
 		.pipe(postcss([mqpacker()]))
+		.pipe(mmq())
 		.pipe(gulp.dest('./css'));
 });
 
@@ -41,4 +43,5 @@ gulp.task('bs-reload', function () {
 gulp.task('default', ['browser-sync', 'watch'], function () {
 	gulp.watch("./*.html", ['bs-reload']);
 	gulp.watch("./css/*.css", ['bs-reload']);
+	gulp.watch("./js/*.js", ['bs-reload']);
 });
