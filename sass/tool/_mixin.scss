@@ -87,6 +87,7 @@
 	@return $size * $scale;
 }
 
+// ul, olの初期化
 @mixin linit {
 	list-style: none;
 	padding: 0;
@@ -96,4 +97,11 @@
 // 割り算
 @function division($size, $size2) {
 	@return $size / $size2;
+}
+
+// 代表的な横並び
+@mixin row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
