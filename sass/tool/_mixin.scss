@@ -99,8 +99,14 @@
 	@return $size / $size2;
 }
 
-// 代表的な横並び
+// 横並び
 @mixin row {
+	display: flex;
+	justify-content: space-between;
+}
+
+// 横並び（上下中央そろえ）
+@mixin row-c {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
