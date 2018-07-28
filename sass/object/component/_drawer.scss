@@ -1,3 +1,14 @@
+// <div id="drawer" class="drawer-right">
+// 	<input id="drawer-check" class="drawer-hidden" type="checkbox">
+// 	<label id="drawer-open" class="drawer-open-fixed" for="drawer-check">
+// 		<span></span>
+// 	</label>
+// 	<label id="drawer-close" class="drawer-hidden" for="drawer-check"></label>
+// 	<div id="drawer-content">
+// 	</div>
+// 	<!-- drawer-content -->
+// </div>
+// <!-- drawer -->
 #drawer {
 	position: fixed;
 	top: 0;
