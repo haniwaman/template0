@@ -4,3 +4,4 @@ capture/
 package-lock.json
 index.html
 .vscode/
+debug.log

@@ -7,14 +7,17 @@
     "autoprefixer": "^8.2.0",
     "browser-sync": "^2.23.6",
     "css-declaration-sorter": "^3.0.1",
-    "css-mqpacker": "^6.0.2",    
-		"gulp": "^3.9.1",    
-		"gulp-merge-media-queries": "^0.2.1",
+    "css-mqpacker": "^6.0.2",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-merge-media-queries": "^0.2.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.9"
+    "gulp-sass-glob": "^1.0.9",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^6.0.0"
   }
 }
