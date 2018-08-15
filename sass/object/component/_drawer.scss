@@ -14,13 +14,14 @@
 	top: 0;
 	left: 0;
 	z-index: map-get($layer, 'drawer');
+	display: none;
 
 	&.drawer-right {
 		left: auto;
 		right: 0;
 	}
-	@include mq('pc') {
-		display: none;
+	@include mq('sp') {
+		display: block;
 	}
 }
 
