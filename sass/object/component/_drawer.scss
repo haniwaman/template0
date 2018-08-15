@@ -19,6 +19,9 @@
 		left: auto;
 		right: 0;
 	}
+	@include mq('pc') {
+		display: none;
+	}
 }
 
 .drawer-hidden {
