@@ -16,7 +16,7 @@ var mqpacker     = require('css-mqpacker');
 
 var imageminOption = [
 	imageminPngquant({ quality: '65-80' }),
-	imageminMozjpeg({ quality: 80 }),
+	imageminMozjpeg({ quality: 85 }),
 	imagemin.gifsicle({
 		interlaced: false,
 		optimizationLevel: 1,
