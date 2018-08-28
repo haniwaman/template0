@@ -1,0 +1,59 @@
+.c-card {
+	display: inline-block;
+	text-decoration: none;
+	max-width: 100%;
+	height: auto;
+	position: relative;
+	text-align: left;
+	background: #fff;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+	margin: 0 0 1.6em;
+
+	.c-card-img {
+		text-align: center;
+		padding: 0 0 56.25% 0;
+		margin: 0;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+
+		img {
+			vertical-align: top;
+			margin: 0;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.c-card-body {
+		padding: 0.8em;
+
+		time {
+			color: lighten($color-text, 30%);
+			font-size: 0.875em;
+		}
+
+		.c-card-title {
+			font-size: 1.2em;
+			color: #333;
+			margin: 0.4em 0;
+		}
+
+		p {
+			font-size: 0.95em;
+			color: lighten($color-text, 30%);
+			margin: 0;
+		}
+	}
+
+	.c-card-cate {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $color-main;
+		color: #fff;
+		padding: 0.4em 0.8em;
+		font-size: 0.875em;
+		line-height: 1;
+	}
+}

@@ -1,0 +1,82 @@
+// コンテンツ幅
+/*
+ * <!-- example -->
+ * <header>
+ *	<div class="inner>
+ *	</div>
+ * </header>
+ */
+.inner {
+
+	margin: 0 auto;
+
+	@include mq("pc") {
+		width: $layout-width-inner;
+	}
+}
+
+.header,
+.content,
+.footer {
+	width: 100%;
+}
+
+.primary {
+
+	@include mq("pc") {
+		width: $layout-width-main;
+		margin-right: 2em;
+	}
+}
+
+.secondary {
+	padding: 0 12px;
+
+	@include mq("pc") {
+		width: $layout-width-side;
+		padding: 0;
+	}
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row-c {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sp-only {
+	display: none;
+
+	@include mq('sp') {
+		display: block;
+	}
+}
+
+.sp-hidden {
+	display: block;
+
+	@include mq('sp') {
+		display: hidden;
+	}
+}
+
+.pc-only {
+	display: none;
+
+	@include mq('pc') {
+		display: block;
+	}
+}
+
+.pc-hidden {
+	display: block;
+
+	@include mq('pc') {
+		display: hidden;
+	}
+}

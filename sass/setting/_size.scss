@@ -1,0 +1,41 @@
+// レイアウト幅
+$layout-width-canvas : 1440px;
+$layout-width-header-inner : 1286px;
+$layout-width-inner : 820px;
+$layout-width-main  : 768px;
+$layout-width-side  : 336px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp"  : "screen and (max-width: 767px)", // 425px
+	"tab-head" : "screen and (max-width: #{$layout-width-header-inner - 1px})",
+	"tab" : "screen and (max-width: #{$layout-width-inner - 1px})",
+	"pc"  : "screen and (min-width: #{$layout-width-inner})",
+);
+
+// ヘッダー高さ（sp）
+$header-height: 62px;
+
+// z-index の指定
+$layer: (
+	modal    : 100,
+	drawer   : 40,
+	floating : 30,
+	header   : 20,
+	footer   : 10,
+	default  : 1
+);
+
+$scale: 1.2;
+
+// ドロワーアイコン
+$drawer-width        : 250px;
+$drawer-speed        : 0.5s;
+$drawer-icon-width   : 60px;
+$drawer-icon-height  : 60px;
+$bar-width           : 28px;
+$bar-height          : 4px;
+$bar-radius          : 3px;
+$bar-space           : 4px;
+$bar-bg              : $color-main;
+$bar-color           : $color-white;
