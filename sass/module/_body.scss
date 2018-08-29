@@ -61,7 +61,7 @@
 	display: block;
 
 	@include mq('sp') {
-		display: hidden;
+		display: none;
 	}
 }
 
@@ -77,6 +77,6 @@
 	display: block;
 
 	@include mq('pc') {
-		display: hidden;
+		display: none;
 	}
 }
