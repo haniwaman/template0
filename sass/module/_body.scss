@@ -9,6 +9,7 @@
 .inner {
 
 	margin: 0 auto;
+	max-width: 100%;
 
 	@include mq("pc") {
 		width: $layout-width-inner;
