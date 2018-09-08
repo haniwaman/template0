@@ -15,13 +15,13 @@
 	}
 }
 
-.header,
-.content,
-.footer {
+#header,
+#content,
+#footer {
 	width: 100%;
 }
 
-.primary {
+#primary {
 
 	@include mq("pc") {
 		width: $layout-width-main;
@@ -29,7 +29,7 @@
 	}
 }
 
-.secondary {
+#secondary {
 	padding: 0 12px;
 
 	@include mq("pc") {
