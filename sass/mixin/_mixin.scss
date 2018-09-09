@@ -83,7 +83,7 @@
 }
 
 // 倍率変更
-@function scale($size, $scale: 1) {
+@function size($size, $scale: 1) {
 
 	@return $size * $scale;
 }
