@@ -13,20 +13,21 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: map-get($layer, 'drawer');
+	z-index: map-get($layer, "drawer");
 	display: none;
 
 	&.drawer-right {
 		left: auto;
 		right: 0;
 	}
-	@include mq('sp') {
+
+	@include mq("sp") {
 		display: block;
 	}
 }
 
 .drawer-hidden {
-	display:none;
+	display: none;
 }
 
 #drawer-open {
@@ -56,11 +57,11 @@
 		&::after {
 			position: absolute;
 			width: 100%;
-		  height: 100%;
+			height: 100%;
 			border-radius: $bar-radius;
 			background: $bar-color;
 			display: block;
-			content: '';
+			content: "";
 			cursor: pointer;
 			margin: (-$bar-height/2) 0 0 -50%;
 			top: 50%;
@@ -84,7 +85,7 @@
 #drawer-close {
 	display: none;
 	position: fixed;
-	z-index: map-get($layer, 'drawer') - 1;
+	z-index: map-get($layer, "drawer") - 1;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -99,7 +100,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: map-get($layer, 'drawer');
+	z-index: map-get($layer, "drawer");
 	width: $drawer-width;
 	max-width: 90%;
 	height: 100%;
@@ -109,7 +110,7 @@
 
 	.drawer-title {
 		font-size: 1em;
-		font-weight: bold;
+		font-weight: 700;
 		text-align: center;
 		padding: 0 34px;
 	}
@@ -126,7 +127,7 @@
 #drawer-check:checked ~ #drawer-open.drawer-open-fixed {
 	transform: translateX($drawer-width);
 	position: relative;
-	z-index: map-get($layer,'drawer') + 1;
+	z-index: map-get($layer, "drawer") + 1;
 
 	span {
 		background: rgba($bar-color, 0);
@@ -165,7 +166,6 @@
 	width: $drawer-icon-width;
 	height: $drawer-icon-height;
 	vertical-align: middle;
-	position: relative;
 	cursor: pointer;
 
 	span {
@@ -209,5 +209,5 @@
 	text-align: center;
 	color: $bar-bg;
 	font-size: 1.2em;
-	font-weight: bold;
+	font-weight: 700;
 }
