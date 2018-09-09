@@ -1,0 +1,8 @@
+{
+	"extends": ["stylelint-config-wordpress/scss"],
+	"rules": {
+		"function-url-quotes": "always",
+		"no-descending-specificity": null,
+		"declaration-colon-newline-after": null
+	}
+}
