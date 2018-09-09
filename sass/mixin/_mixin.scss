@@ -19,11 +19,13 @@
 
 // px → rem 変換
 @function rem($pixcels, $context: $baseFontSize) {
+
 	@return $pixels / $content * 1rem;
 }
 
 // リンクのアローアイコン
 @mixin linkIcon($color: #333) {
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -39,7 +41,8 @@
 }
 
 // リンクのアイコン（Font Awesome）
-@mixin linkIconFA($icon: '\f105', $family: 'Font Awesome 5 Free') {
+@mixin linkIconFA($icon: "\f105", $family: "Font Awesome 5 Free") {
+
 	&::before {
 		content: $icon;
 		position: absolute;
@@ -52,7 +55,8 @@
 }
 
 // リストスタイル
-@mixin listStyle($src: '../img/noimage.png', $width: 6px, $height: 6px) {
+@mixin listStyle($src: "../img/noimage.png", $width: 6px, $height: 6px) {
+
 	&::before {
 		content: "";
 		background: url($src) no-repeat center left / contain;
@@ -68,7 +72,8 @@
 @mixin rwd_iframe($width: 16, $height: 9) {
 	position: relative;
 	padding-top: percentage($height / $width);
-	>iframe {
+
+	> iframe {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -79,6 +84,7 @@
 
 // 倍率変更
 @function scale($size, $scale: 1) {
+
 	@return $size * $scale;
 }
 
@@ -91,6 +97,7 @@
 
 // 割り算
 @function division($size, $size2) {
+
 	@return $size / $size2;
 }
 
@@ -106,4 +113,3 @@
 	justify-content: space-between;
 	align-items: center;
 }
-
