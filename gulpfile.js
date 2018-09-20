@@ -12,7 +12,6 @@ var imageminMozjpeg  = require('imagemin-mozjpeg');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssdeclsort  = require('css-declaration-sorter');
-var mqpacker     = require('css-mqpacker');
 
 var imageminOption = [
 	imageminPngquant({ quality: '65-80' }),
