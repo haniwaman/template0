@@ -25,5 +25,8 @@
 	},
 	"dependencies": {
 		"eslint-config-wordpress": "^2.0.0"
+	},
+	"scripts": {
+		"format": "prettier-stylelint --quiet --write ./css/style.css"
 	}
 }
