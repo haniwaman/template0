@@ -34,7 +34,6 @@ gulp.task('sass', function() {
 		.pipe(sass({outputStyle: 'expanded'}))
 		.pipe(postcss([autoprefixer()]))
 		.pipe(postcss([cssdeclsort({order: 'alphabetically'})]))
-		.pipe(postcss([mqpacker()]))
 		.pipe(mmq())
 		.pipe(gulp.dest('./css'));
 });
