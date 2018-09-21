@@ -16,6 +16,7 @@
 		"gulp-replace": "^0.6.1",
 		"gulp-sass": "^3.1.0",
 		"gulp-sass-glob": "^1.0.9",
+		"gulp-stylelint": "^7.0.0",
 		"imagemin-mozjpeg": "^7.0.0",
 		"imagemin-pngquant": "^6.0.0",
 		"prettier": "^1.14.3",
