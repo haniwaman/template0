@@ -13,8 +13,9 @@ body {
 body {
 	font-family: $font-family-base;
 	font-size: $font-size-base;
+	font-weight: $font-weight;
 	color: $color-text;
-	line-height: 1.6;
+	line-height: $line-height;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: $color-bg;
