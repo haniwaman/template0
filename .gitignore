@@ -1,7 +1,3 @@
-img/
-node_modules/
-capture/
-package-lock.json
-index.html
 .vscode/
-debug.log
+node_modules/
+package-lock.json
