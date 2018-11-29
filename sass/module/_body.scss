@@ -52,13 +52,91 @@
 
 .row {
 	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&.row-t-col {
+
+		@include mq("tab") {
+			flex-direction: column;
+		}
+	}
+
+	&.row-s-col {
+
+		@include mq("sp") {
+			flex-direction: column;
+		}
+	}
+}
+
+.row-b {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
 	justify-content: space-between;
+
+	&.row-t-col {
+
+		@include mq("tab") {
+			flex-direction: column;
+		}
+	}
+
+	&.row-s-col {
+
+		@include mq("sp") {
+			flex-direction: column;
+		}
+	}
 }
 
 .row-c {
 	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: row;
+	align-items: center;
+
+	&.row-t-col {
+
+		@include mq("tab") {
+			flex-direction: column;
+		}
+	}
+
+	&.row-s-col {
+
+		@include mq("sp") {
+			flex-direction: column;
+		}
+	}
+}
+
+.row-bc {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
 	justify-content: space-between;
 	align-items: center;
+
+	&.row-t-col {
+
+		@include mq("tab") {
+			flex-direction: column;
+		}
+	}
+
+	&.row-s-col {
+
+		@include mq("sp") {
+			flex-direction: column;
+		}
+	}
 }
 
 .sp-only {
