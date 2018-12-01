@@ -11,6 +11,7 @@ $breakpoints: (
 	"tab-head" : "screen and (max-width: #{$layout-width-header-inner - 1px})",
 	"tab" : "screen and (max-width: #{$layout-width-inner - 1px})",
 	"pc"  : "screen and (min-width: #{$layout-width-inner})",
+	"ie": "screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none)",
 );
 
 // ヘッダー高さ
