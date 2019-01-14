@@ -581,11 +581,11 @@ select:focus {
 	padding-top: 0;
 }
 
-.hnav-item {
+.header-item {
 	display: inline-block;
 }
 
-.hnav-item > a {
+.header-item > a {
 	color: #333;
 	display: block;
 	text-decoration: none;
