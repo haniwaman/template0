@@ -1,0 +1,33 @@
+{
+	"name": "package-template",
+	"version": "1.0.0",
+	"author": "haniwaman",
+	"license": "GPLv2",
+	"devDependencies": {
+		"autoprefixer": "^8.2.0",
+		"browser-sync": "^2.23.6",
+		"css-declaration-sorter": "^3.0.1",
+		"gulp": "^3.9.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-merge-media-queries": "^0.2.1",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-postcss": "^7.0.1",
+		"gulp-sass": "^3.1.0",
+		"gulp-sass-glob": "^1.0.9",
+		"imagemin-mozjpeg": "^7.0.0",
+		"imagemin-pngquant": "^6.0.0",
+		"prettier": "^1.14.3",
+		"prettier-stylelint": "^0.4.2",
+		"stylelint": "^9.4.0",
+		"stylelint-config-recommended-scss": "^3.2.0",
+		"stylelint-config-wordpress": "^13.0.0",
+		"stylelint-scss": "^3.3.0"
+	},
+	"dependencies": {
+		"eslint-config-wordpress": "^2.0.0"
+	},
+	"scripts": {
+		"format": "prettier-stylelint --quiet --write ./css/style.css"
+	}
+}

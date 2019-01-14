@@ -1,0 +1,320 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $fz-base;
+	font-size: $fz-base;
+	font-weight: $fw-base;
+	color: $cr-txt;
+	line-height: $lh-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: $cr-bg;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	color: inherit;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: top;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, sans-serif;
+	font-size: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+	border: 1px solid $cr-table;
+}
+
+th,
+td {
+	padding: 4px 6px;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid $cr-table;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+	content: "";
+	content: none;
+}
+
+input,
+textarea {
+	padding: 8px;
+	border: 1px solid $cr-outline;
+	border-radius: 0;
+	background-image: none;
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+
+	&:focus {
+		outline: none;
+		border: 1px solid $cr-outline-on;
+		box-shadow: none;
+	}
+}
+
+input {
+
+	&[type="submit"] {
+		cursor: pointer;
+		border: none;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border: none;
+		}
+
+		::-moz-focus-inner {
+			padding: 0;
+			border: none;
+		}
+	}
+
+	&[type="radio"] {
+		display: none;
+
+		+ span {
+			display: inline-block;
+			position: relative;
+			padding: 0 0 0 1.2em;
+			margin: 0 0.2em 0;
+			cursor: pointer;
+
+			&::before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				background: #fff;
+				border: 1px solid $cr-outline;
+				border-radius: 50%;
+				width: 1em;
+				height: 1em;
+				display: block;
+			}
+
+			&::after {
+				opacity: 0;
+				transition: opacity 0.3s ease 0s;
+			}
+
+			&:focus,
+			&:checked {
+				outline: none;
+				border: 1px solid #fff;
+				box-shadow: none;
+				background: $cr-check;
+			}
+		}
+
+		&:checked + span {
+
+			&::after {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 0.2em;
+				transform: translateY(-50%);
+				background: $cr-check;
+				border-radius: 50%;
+				width: 0.6em;
+				height: 0.6em;
+				display: block;
+				opacity: 1;
+			}
+		}
+	}
+
+	&[type="checkbox"] {
+		display: none;
+
+		+ span {
+			display: inline-block;
+			position: relative;
+			padding: 0 0 0 1.2em;
+			margin: 0 0.2em 0;
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+
+			&::before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				background: #fff;
+				border: 1px solid $cr-outline;
+				border-radius: 2px;
+				width: 1em;
+				height: 1em;
+				display: block;
+			}
+
+			&::after {
+				opacity: 0;
+				transition: opacity 0.3s ease 0s;
+			}
+		}
+
+		&:checked + span {
+
+			&::after {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%) rotate(-45deg);
+				width: 1em;
+				height: 0.6em;
+				margin-top: -0.2em;
+				display: block;
+				border-left: 3px solid $cr-check;
+				border-bottom: 3px solid $cr-check;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+select {
+	width: 100%;
+	padding: 8px 24px 8px 8px;
+	border-radius: 0;
+	background-image: none;
+	border: 1px solid $cr-outline;
+	font-family: inherit;
+	font-size: 1em;
+	color: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid $cr-outline-on;
+		box-shadow: none;
+	}
+}

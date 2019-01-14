@@ -1,0 +1,197 @@
+/* 左寄せ */
+.drawer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: map-get($layer, "drawer");
+	display: none;
+
+	@include mq("sp") {
+		display: block;
+	}
+}
+
+#drawer-check {
+	display: none;
+}
+
+.drawer-open {
+	display: inline-block;
+	width: $drawer-icon-width;
+	height: $drawer-icon-height;
+	vertical-align: middle;
+	position: relative;
+	transition: $drawer-speed ease-in-out;
+	cursor: pointer;
+	background: $bar-bg;
+	z-index: map-get($layer, "drawer") + 1;
+
+	span {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		height: $bar-height;
+		width: $bar-width;
+		margin: (-$bar-height/2) 0 0 (-$bar-width/2);
+		background: $bar-color;
+		border-radius: $bar-radius;
+		transition: $drawer-speed ease-in-out;
+
+		&::before,
+		&::after {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: $bar-radius;
+			background: $bar-color;
+			display: block;
+			content: "";
+			cursor: pointer;
+			margin: (-$bar-height/2) 0 0 -50%;
+			top: 50%;
+			left: 50%;
+			transform: rotate(0);
+			transition: $drawer-speed ease-in-out;
+		}
+
+		&::before {
+			margin-top: -$bar-height - $bar-height/2 - $bar-space;
+			transform: rotate(0);
+		}
+
+		&::after {
+			margin-top: $bar-height/2 + $bar-space;
+			transform: rotate(0);
+		}
+	}
+}
+
+.drawer-close {
+	display: none;
+	position: fixed;
+	z-index: map-get($layer, "drawer") - 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.drawer-content {
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: map-get($layer, "drawer");
+	width: $drawer-width;
+	max-width: 90%;
+	height: 100%;
+	background: #fff;
+	transition: $drawer-speed ease-in-out;
+	transform: translateX(-105%);
+	padding-top: $header-height;
+
+	.drawer-title {
+		font-size: 1em;
+		font-weight: 700;
+		text-align: center;
+		padding: 0 34px;
+	}
+}
+
+#drawer-check:checked {
+
+	.drawer-head {
+		line-height: $drawer-icon-height;
+		text-align: center;
+		color: $bar-bg;
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+
+	~ .drawer-open {
+
+		span {
+			background: rgba($bar-color, 0);
+
+			&::before,
+			&::after {
+				display: block;
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				border-radius: $bar-radius;
+				width: $bar-width;
+				height: $bar-height;
+				margin: (-$bar-height/2) 0 0 (-$bar-width/2);
+				background: $bar-color;
+			}
+
+			&::before {
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	~ .drawer-close {
+		display: block;
+		opacity: 0.4;
+	}
+
+	~ .drawer-content {
+		transform: translateX(0);
+		box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+	}
+}
+
+.drawer-list {
+
+	@include linit;
+}
+
+.drawer-item {
+
+	a {
+		text-decoration: none;
+		color: $cr-txt;
+		display: block;
+		padding: 1em;
+	}
+}
+
+/* 右寄せ */
+.drawer {
+
+	&.m_right {
+		left: auto;
+		right: 0;
+	}
+}
+
+.drawer-content {
+
+	.drawer.m_right & {
+		left: auto;
+		right: 0;
+		transform: translateX(105%);
+		text-align: left;
+	}
+}
+
+#drawer-check:checked {
+
+	~ .drawer-content {
+
+		.drawer.m_right & {
+			transform: translateX(0);
+		}
+	}
+}

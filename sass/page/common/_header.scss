@@ -1,0 +1,19 @@
+#header {
+
+	.inner {
+
+		display: flex;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.hnav-item {
+	display: inline-block;
+
+	> a {
+		text-decoration: none;
+		color: $cr-txt;
+		display: block;
+	}
+}
