@@ -2,10 +2,7 @@
 	margin: 0 auto;
 	padding: 80px 0;
 	max-width: 100%;
-
-	@include mq("pc") {
-		width: $layout-width-inner;
-	}
+	width: $layout-width-inner;
 
 	@include mq("tab") {
 		padding-right: 24px;
