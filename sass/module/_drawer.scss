@@ -152,20 +152,6 @@
 	}
 }
 
-.drawer-list {
-
-	@include linit;
-}
-
-.drawer-item {
-
-	a {
-		text-decoration: none;
-		color: $cr-txt;
-		display: block;
-		padding: 1em;
-	}
-}
 
 /* 右寄せ */
 .drawer {
@@ -193,5 +179,16 @@
 		.drawer.m_right & {
 			transform: translateX(0);
 		}
+	}
+}
+
+
+.drawer-item {
+
+	a {
+		text-decoration: none;
+		color: $cr-txt;
+		display: block;
+		padding: 1em;
 	}
 }
