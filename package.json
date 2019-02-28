@@ -7,7 +7,7 @@
 		"autoprefixer": "^8.2.0",
 		"browser-sync": "^2.23.6",
 		"css-declaration-sorter": "^3.0.1",
-		"gulp": "^3.9.1",
+		"gulp": "^4.0.0",
 		"gulp-imagemin": "^4.1.0",
 		"gulp-merge-media-queries": "^0.2.1",
 		"gulp-notify": "^3.2.0",
