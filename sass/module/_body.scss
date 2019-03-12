@@ -14,35 +14,3 @@
 		padding-left: 12px;
 	}
 }
-
-.sp-only {
-	display: none;
-
-	@include mq("sp") {
-		display: block;
-	}
-}
-
-.sp-hidden {
-	display: block;
-
-	@include mq("sp") {
-		display: none;
-	}
-}
-
-.pc-only {
-	display: none;
-
-	@include mq("pc") {
-		display: block;
-	}
-}
-
-.pc-hidden {
-	display: block;
-
-	@include mq("pc") {
-		display: none;
-	}
-}
