@@ -154,37 +154,79 @@ q::before {
 	content: none;
 }
 
+form {
+	margin: 0;
+	padding: 0;
+}
+
 input,
 textarea {
+	width: 100%;
 	padding: 8px;
-	border: 1px solid $cr-outline;
+	border: 1px solid $cr-form-bd;
 	border-radius: 0;
 	background-image: none;
 	font-family: inherit;
-	font-size: inherit;
+	font-size: 1em;
 	-webkit-appearance: none;
-
-	&:focus {
-		outline: none;
-		border: 1px solid $cr-outline-on;
-		box-shadow: none;
-	}
 }
 
 textarea {
-	resize: none;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		opacity: $opacity;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: $cr-form-bd_avtive;
+		box-shadow: none;
+	}
+
+	::-moz-focus-inner {
+		padding: 0;
+		border: none;
+	}
 }
 
 input {
 
-	&[type="submit"] {
-		cursor: pointer;
+	&:focus {
+		outline: none;
+		border-color: $cr-form-bd_avtive;
+		box-shadow: none;
+	}
+
+	&[type="submit"],
+	&[type="button"] {
+		width: auto;
+		display: inline-block;
+		padding: 0.6em 2em;
+		margin: 1em 0 0;
+		background-image: none;
+		background-color: $color-main;
+		color: #fff;
+		text-decoration: none;
 		border: none;
+		border-radius: 0;
+		font-size: 16px;
+		cursor: pointer;
+		-webkit-appearance: none;
+		box-shadow: 0.0625em 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.16);
+		transition: all 0.3s ease 0s;
 
 		&:hover,
 		&:focus {
 			outline: none;
-			border: none;
+		}
+
+		&:hover {
+			opacity: $opacity;
 		}
 
 		::-moz-focus-inner {
@@ -199,7 +241,7 @@ input {
 		+ span {
 			display: inline-block;
 			position: relative;
-			padding: 0 0 0 1.2em;
+			padding: 0 0 0 $size-radio-pd_left;
 			margin: 0 0.2em 0;
 			cursor: pointer;
 
@@ -210,24 +252,16 @@ input {
 				left: 0;
 				transform: translateY(-50%);
 				background: #fff;
-				border: 1px solid $cr-outline;
+				border: 1px solid $cr-form-bd;
 				border-radius: 50%;
-				width: 1em;
-				height: 1em;
+				width: $size-radio;
+				height: $size-radio;
 				display: block;
 			}
 
 			&::after {
 				opacity: 0;
 				transition: opacity 0.3s ease 0s;
-			}
-
-			&:focus,
-			&:checked {
-				outline: none;
-				border: 1px solid #fff;
-				box-shadow: none;
-				background: $cr-check;
 			}
 		}
 
@@ -237,12 +271,12 @@ input {
 				position: absolute;
 				content: "";
 				top: 50%;
-				left: 0.2em;
+				left: ($size-radio - $size-radio_active) / 2;
 				transform: translateY(-50%);
 				background: $cr-check;
 				border-radius: 50%;
-				width: 0.6em;
-				height: 0.6em;
+				width: $size-radio_active;
+				height: $size-radio_active;
 				display: block;
 				opacity: 1;
 			}
@@ -255,10 +289,10 @@ input {
 		+ span {
 			display: inline-block;
 			position: relative;
-			padding: 0 0 0 1.2em;
+			padding: 0 0 0 $size-checkbox-pd_left;
 			margin: 0 0.2em 0;
 			cursor: pointer;
-			transition: all 0.3s ease 0s;
+			transition: all 1s ease 0s;
 
 			&::before {
 				position: absolute;
@@ -267,10 +301,10 @@ input {
 				left: 0;
 				transform: translateY(-50%);
 				background: #fff;
-				border: 1px solid $cr-outline;
+				border: 1px solid $cr-form-bd;
 				border-radius: 2px;
-				width: 1em;
-				height: 1em;
+				width: $size-checkbox;
+				height: $size-checkbox;
 				display: block;
 			}
 
@@ -301,16 +335,18 @@ input {
 }
 
 select {
-	width: 100%;
-	padding: 8px 24px 8px 8px;
+	padding: 0.4em 2.4em 0.4em 0.8em;
 	border-radius: 0;
-	background-image: none;
-	border: 1px solid $cr-outline;
+	background-image: url(../img/arrow.svg);
+	background-position: right 6px center;
+	background-repeat: no-repeat;
+	background-size: 24px;
 	font-family: inherit;
 	font-size: 1em;
-	cursor: pointer;
+	color: inherit;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+	border: 1px solid $cr-form-bd;
 
 	&::-ms-expand {
 		display: none;
@@ -318,7 +354,7 @@ select {
 
 	&:focus {
 		outline: none;
-		border: 1px solid $cr-outline-on;
 		box-shadow: none;
+		border-color: $cr-form-bd_avtive;
 	}
 }
