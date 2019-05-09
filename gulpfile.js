@@ -4,6 +4,7 @@ var plumber = require( 'gulp-plumber' );
 var notify = require( 'gulp-notify' );
 var sassGlob = require( 'gulp-sass-glob' );
 var mmq = require( 'gulp-merge-media-queries' );
+var sourcemaps = require( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' );
 var imagemin = require( 'gulp-imagemin' );
 var imageminPngquant = require( 'imagemin-pngquant' );
@@ -31,10 +32,12 @@ gulp.task( 'sass', function() {
 		.src( './sass/**/*.scss' )
 		.pipe( plumber({ errorHandler: notify.onError( 'Error: <%= error.message %>' ) }) )
 		.pipe( sassGlob() )
+		.pipe( sourcemaps.init() )
 		.pipe( sass({ outputStyle: 'expanded' }) )
 		.pipe( postcss([ autoprefixer() ]) )
 		.pipe( postcss([ cssdeclsort({ order: 'alphabetically' }) ]) )
 		.pipe( mmq() )
+		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( './css' ) );
 });
 
