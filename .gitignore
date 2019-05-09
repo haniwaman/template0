@@ -4,3 +4,4 @@ node_modules/
 package-lock.json
 img/.gitkeep
 img/base/
+css/style.css.map
