@@ -1,18 +1,63 @@
 #header {
+	position: fixed;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(#000, 0.16);
+	z-index: map-get($layer, "header");
 
 	> .inner {
 		display: flex;
+		align-items: center;
 		padding-top: 0;
 		padding-bottom: 0;
+		height: $header-height;
 	}
 }
 
-.header-item {
-	display: inline-block;
+.header-logo {
+	margin-right: auto;
 
-	> a {
-		text-decoration: none;
-		color: $cr-txt;
-		display: block;
+	a {
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: $opacity;
+		}
+	}
+
+	img {
+		width: 200px;
+	}
+}
+
+.header-nav {
+
+	@include mq("sp") {
+		display: none;
+	}
+
+	ul {
+		font-size: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 16px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		> a {
+			text-decoration: none;
+			color: $cr-txt;
+			display: block;
+			font-size: 16px;
+			transition: all 0.3s ease 0s;
+
+			&:hover {
+				opacity: $opacity;
+			}
+		}
 	}
 }
