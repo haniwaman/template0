@@ -178,10 +178,6 @@ textarea {
 		outline: none;
 	}
 
-	&:hover {
-		opacity: $opacity;
-	}
-
 	&:focus {
 		outline: none;
 		border-color: $cr-form-bd_avtive;
