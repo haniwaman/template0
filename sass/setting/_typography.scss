@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 
-// ベースフォント
-$fz-base: 16px;
-$ff-base: "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
-
 $ff-kgpw3: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Noto Sans Japanese", sans-serif;
 $ff-kgpw6: "HiraKakuPro-W6", "ヒラギノ角ゴ Pro W6", "Noto Sans Japanese", sans-serif;
 
@@ -12,5 +8,7 @@ $ff-gothic: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro
 
 $ff-awesome: "Font Awesome 5 Free", sans-serif;
 
+$fz-base: 16px;
+$ff-base: "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
 $fw-base: 500;
 $lh-base: 1.6;
