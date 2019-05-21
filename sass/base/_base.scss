@@ -342,6 +342,7 @@ select {
 	color: inherit;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+	cursor: pointer;
 	border: 1px solid $cr-form-bd;
 
 	&::-ms-expand {
