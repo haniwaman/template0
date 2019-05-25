@@ -157,6 +157,38 @@ q::before {
 form {
 	margin: 0;
 	padding: 0;
+	
+	button {
+		width: auto;
+		display: inline-block;
+		padding: 0.6em 2em;
+		margin: 0;
+		background-image: none;
+		background-color: $cr-m;
+		color: #fff;
+		text-decoration: none;
+		border: none;
+		border-radius: 0;
+		font-size: 16px;
+		cursor: pointer;
+		-webkit-appearance: none;
+		box-shadow: 0.0625em 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.16);
+		transition: all 0.3s ease 0s;
+
+		&:hover,
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			opacity: $opacity;
+		}
+
+		::-moz-focus-inner {
+			padding: 0;
+			border: none;
+		}
+	}
 }
 
 input,
