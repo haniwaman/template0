@@ -5,12 +5,12 @@
 	width: $layout-width-inner;
 
 	@include mq("tab") {
-		padding-right: 24px;
-		padding-left: 24px;
+		padding-right: $pd-tab;
+		padding-left: $pd-tab;
 	}
 
 	@include mq("sp") {
-		padding-right: 12px;
-		padding-left: 12px;
+		padding-right: $pd-sp;
+		padding-left: $pd-sp;
 	}
 }
