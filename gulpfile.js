@@ -46,6 +46,7 @@ gulp.task( 'sass', function() {
 });
 
 gulp.task( 'watch', function() {
+	gulp.watch( './ejs/**/*.ejs', [ 'ejs' ]);
 	gulp.watch( './sass/**/*.scss', [ 'sass' ]);
 });
 
