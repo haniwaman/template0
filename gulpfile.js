@@ -14,6 +14,10 @@ var postcss = require( 'gulp-postcss' );
 var autoprefixer = require( 'autoprefixer' );
 var cssdeclsort = require( 'css-declaration-sorter' );
 
+var ejs = require( 'gulp-ejs' );
+var rename = require( 'gulp-rename' );
+var replace = require( 'gulp-replace' );
+
 var imageminOption = [
 	imageminPngquant({ quality: '65-80' }),
 	imageminMozjpeg({ quality: 85 }),
@@ -69,4 +73,13 @@ gulp.task( 'imagemin', function() {
 		.src( './img/**/*' )
 		.pipe( imagemin( imageminOption ) )
 		.pipe( gulp.dest( './img' ) );
+});
+
+gulp.task( 'ejs', function() {
+	return gulp
+		.src([ 'ejs/**/*.ejs', '!ejs/**/_*.ejs' ])
+		.pipe( ejs({}, {}, { ext: '.html' }) )
+		.pipe( rename({ extname: '.html' }) )
+		.pipe( replace( /[\s\S]*?(<!DOCTYPE)/, '$1' ) )
+		.pipe( gulp.dest( './' ) );
 });
