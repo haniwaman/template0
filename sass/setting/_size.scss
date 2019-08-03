@@ -1,15 +1,14 @@
 // レイアウト幅
 $layout-width-canvas: 1440px;
-$layout-width-header-inner: 1286px;
-$layout-width-inner: 820px;
+$layout-width-inner: 1060px;
 
 // ブレークポイント
 $breakpoints: (
-	"sp": "screen and (max-width: 767px)",
-	"tab-head": "screen and (max-width: #{$layout-width-header-inner - 1px})",
-	"tab": "screen and (max-width: #{$layout-width-inner - 1px})",
-	"pc": "screen and (min-width: #{$layout-width-inner})",
-	"ie": "screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none)"
+	"sp": "(max-width: 767px)",
+	"tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+	"tab": "(max-width: #{$layout-width-inner - 1px})",
+	"pc": "(min-width: #{$layout-width-inner})",
+	"ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)"
 );
 
 // ヘッダー高さ
