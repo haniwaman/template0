@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>タイトル</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<!-- <link rel="icon" href="img/favicon.ico"> -->
+<meta name="description" content="ディスクリプション">
+<!-- <link rel="icon" href="./img/favicon.ico"> -->
 </head>
 <body>
 
@@ -17,42 +16,33 @@
 <header id="header">
 <div class="inner">
 
-<h1 class="header-logo"><a href=""><img src="img/header-logo.png" alt="ロゴ"></a></h1>
+<h1 class="header-logo"><a href=""><img src="./img/header-logo.png" alt="ロゴ"></a></h1>
 
 <!-- header-nav -->
 <nav class="header-nav">
-<ul class="header-list">
-	<li><a href="#">MENU1</a></li>
-	<li><a href="#">MENU2</a></li>
-	<li><a href="#">MENU3</a></li>
-	<li><a href="#">MENU4</a></li>
-	<li><a href="#">MENU5</a></li>
-</ul>
+	<ul>
+		<li><a href="#">MENU1</a></li>
+		<li><a href="#">MENU2</a></li>
+		<li><a href="#">MENU3</a></li>
+		<li><a href="#">MENU4</a></li>
+		<li><a href="#">MENU5</a></li>
+	</ul>
 </nav><!-- /header-nav -->
+
+<div class="drawer">
+	<div class="drawer-icon js-drawer for-drawer" data-target="for-drawer">
+		<div class="drawer-bars">
+				<span class="drawer-bar"></span>
+				<span class="drawer-bar"></span>
+				<span class="drawer-bar"></span>
+		</div>
+	</div>
+	<div class="drawer-close js-drawer for-drawer"></div>
+	<div class="drawer-content for-drawer">コンテンツ部分</div>
+</div>
 
 </div><!-- /inner -->
 </header><!-- /header -->
-
-
-<!-- drawer -->
-<div class="drawer">
-<div class="drawer-open"><span></span></div>
-<div class="drawer-close"></div>
-
-<!-- drawer-content -->
-<div class="drawer-content">
-<nav class="drawer-nav">
-<ul class="drawer-list">
-	<li><a href="#">MENU1</a></li>
-	<li><a href="#">MENU2</a></li>
-	<li><a href="#">MENU3</a></li>
-	<li><a href="#">MENU4</a></li>
-	<li><a href="#">MENU5</a></li>
-</ul>
-</nav><!-- /drawer-nav -->
-
-</div><!-- /drawer-content -->
-</div><!-- /drawer -->
 
 
 <!-- mv -->
@@ -66,14 +56,15 @@
 <!-- content -->
 <div id="content">
 <div class="inner">
-	
+
 	<!-- primary -->
 	<main class="primary">
 	</main><!-- primary -->
 
 	<!-- secondary -->
-	<aside id="secondary">
-	</aside><!-- /secondary -->
+<aside id="secondary">
+</aside><!-- /secondary -->
+
 
 </div><!-- /inner -->
 </div><!-- /content -->
@@ -89,7 +80,8 @@
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/script.js"></script>
+<script src="./js/script.js"></script>
 
 </body>
 </html>
+
