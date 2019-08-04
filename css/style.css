@@ -186,7 +186,7 @@ form button {
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 1.6rem;
 	margin: 0;
 	padding: 0.6em 2em;
 	text-decoration: none;
@@ -215,7 +215,7 @@ textarea {
 	border: 1px solid #707070;
 	border-radius: 0;
 	font-family: inherit;
-	font-size: 1em;
+	font-size: 1.6rem;
 	padding: 8px;
 	width: 100%;
 }
@@ -252,7 +252,7 @@ input[type="button"] {
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 1.6rem;
 	margin: 0;
 	padding: 0.6em 2em;
 	text-decoration: none;
@@ -386,7 +386,7 @@ select {
 	color: inherit;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 1em;
+	font-size: 1.6rem;
 	padding: 0.4em 2.4em 0.4em 0.8em;
 }
 
@@ -600,7 +600,6 @@ select:focus {
 
 #header {
 	background: #fff;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
 	left: 0;
 	position: fixed;
 	top: 0;
@@ -633,11 +632,11 @@ select:focus {
 }
 
 .header-nav ul {
-	font-size: 0;
+	align-items: center;
+	display: flex;
 }
 
 .header-nav li {
-	display: inline-block;
 	margin-right: 16px;
 }
 
@@ -648,13 +647,16 @@ select:focus {
 .header-nav li > a {
 	color: #333;
 	display: block;
-	font-size: 16px;
 	text-decoration: none;
 	transition: all 0.3s ease 0s;
 }
 
 .header-nav li > a:hover {
 	opacity: 0.6;
+}
+
+.header-drawer {
+	display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1059px) {
@@ -691,6 +693,10 @@ select:focus {
 
 .header-nav {
 	display: none;
+}
+
+.header-drawer {
+	display: block;
 }
 
 .hidden-sp {
