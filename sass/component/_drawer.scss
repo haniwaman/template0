@@ -1,0 +1,145 @@
+// 色
+$color-drawer-bar: #424242;
+$color-drawer-text: #424242;
+$color-content-text: #424242;
+
+// サイズ
+$drawer-bar-space: 5px;
+$drawer-bar-width: 25px;
+$drawer-bar-height: 3px;
+
+.drawer {
+	z-index: map-get($layer, "drawer");
+}
+
+.drawer-close {
+	display: none;
+	position: fixed;
+	z-index: map-get($layer, "drawer") - 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+
+	&.is-checked {
+		display: block;
+		opacity: 0.4;
+	}
+}
+
+.drawer-icon {
+	display: inline-block;
+	position: relative;
+	z-index: map-get($layer, "drawer") + 1;
+	text-align: center;
+	cursor: pointer;
+
+	&::after {
+		content: "MENU";
+		display: block;
+		color: $color-drawer-text;
+		font-size: 0.8rem;
+		text-align: center;
+		line-height: 1;
+		margin-top: 4px;
+		font-weight: 700;
+	}
+
+	&.is-checked {
+
+		&::after {
+			content: "CLOSE";
+		}
+	}
+}
+
+.drawer-bars {
+	display: inline-block;
+	width: $drawer-bar-width;
+	height: $drawer-bar-height + ($drawer-bar-space + $drawer-bar-height) * 2;
+	position: relative;
+	vertical-align: bottom;
+}
+
+.drawer-bar {
+	position: absolute;
+	right: 0;
+	left: 0;
+	display: block;
+	background: $color-drawer-bar;
+	width: 100%;
+	height: $drawer-bar-height;
+	border-radius: 3px;
+	transition: all 0.3s linear 0s;
+
+	&:nth-of-type(1) {
+		top: 0;
+	}
+
+	&:nth-of-type(2) {
+		top: $drawer-bar-space + $drawer-bar-height;
+	}
+
+	&:nth-of-type(3) {
+		top: ($drawer-bar-space + $drawer-bar-height) * 2;
+	}
+
+	.is-checked & {
+
+		&:nth-of-type(1) {
+			top: 10px;
+			transform: rotate(-45deg);
+		}
+
+		&:nth-of-type(2) {
+			background: transparent;
+		}
+
+		&:nth-of-type(3) {
+			top: 10px;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.drawer-content {
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: auto;
+	transform: translateX(105%);
+	z-index: map-get($layer, "drawer");
+	width: 200px;
+	max-width: 90%;
+	height: 100%;
+	background: #fff;
+	transition: all 0.5s ease 0s;
+	padding-top: $header-height;
+	text-align: left;
+	color: $color-content-text;
+
+	&.is-checked {
+		transform: translateX(0);
+		box-shadow: 6px 0 25px rgba(#000, 0.16);
+	}
+}
+
+.drawer-content--left {
+	transform: translateX(-105%);
+	left: 0;
+	right: auto;
+}
+
+.drawer-content--top {
+	transform: translateY(-105%);
+	top: 0;
+	bottom: auto;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+}

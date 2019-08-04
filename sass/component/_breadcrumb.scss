@@ -1,0 +1,16 @@
+.breadcrumb {
+
+	a {
+		&:hover {
+			opacity: $opacity;
+		}
+	}
+
+	span {
+
+		&::before {
+			content: "＞";
+			margin: 0 2px;
+		}
+	}
+}

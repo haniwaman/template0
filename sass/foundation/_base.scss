@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 html,
 body {
 	margin: 0;
@@ -20,6 +24,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background: $cr-bg;
 	overflow-x: hidden;
+	overflow-wrap: break-word;
 }
 
 article,
@@ -121,7 +126,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace, sans-serif;
+	font-family: $ff-code;
 	font-size: inherit;
 }
 
@@ -166,7 +171,7 @@ address {
 form {
 	margin: 0;
 	padding: 0;
-	
+
 	button {
 		width: auto;
 		display: inline-block;

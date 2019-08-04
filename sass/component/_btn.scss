@@ -1,0 +1,35 @@
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 300px;
+	border: 2px solid $cr-m;
+	color: $cr-m;
+	letter-spacing: 0.04em;
+	font-weight: 700;
+	line-height: (60px - 2px * 2);
+	height: 60px;
+	margin: 0;
+	background-image: none;
+	background-color: transparent;
+	text-decoration: none;
+	border-radius: 0;
+	font-size: 1.8rem;
+	text-align: center;
+	-webkit-appearance: none;
+	position: relative;
+	transition: all 0.3s ease 0s;
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&::-moz-foucus-inner {
+		padding: 0;
+		border: none;
+	}
+}

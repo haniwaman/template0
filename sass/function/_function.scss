@@ -1,0 +1,5 @@
+// 割り算
+@function division($numerator, $denominator) {
+
+	@return $numerator / $denominator;
+}
