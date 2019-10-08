@@ -1,3 +1,8 @@
+// ローディング判定
+jQuery(window).on("load", function() {
+	jQuery("body").attr("data-loading", "true");
+});
+
 jQuery(function() {
 	// スクロール判定
 	jQuery(window).on("scroll", function() {
@@ -6,11 +11,6 @@ jQuery(function() {
 		} else {
 			jQuery("body").attr("data-scroll", "false");
 		}
-	});
-
-	// ローディング判定
-	jQuery(window).on("load", function() {
-		jQuery("body").attr("data-loading", "true");
 	});
 
 	/* ドロワー */
@@ -28,7 +28,7 @@ jQuery(function() {
 		let id = jQuery(this).attr("href");
 		let target = jQuery("#" == id ? "html" : id);
 		let position = jQuery(target).offset().top - header;
-		if ("fixed" !== jQuery(".l-header").css("position")) {
+		if ("fixed" !== jQuery("#header").css("position")) {
 			position = jQuery(target).offset().top;
 		}
 		if (0 > position) {
