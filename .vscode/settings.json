@@ -1,0 +1,25 @@
+{
+	"[html]": {
+		"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>?",
+		"editor.wrappingIndent": "none"
+	},
+	"[css]": {
+		"editor.formatOnSave": true
+	},
+	"[scss]": {
+		"editor.wordSeparators": "`~!$%^&*()=+[{]}|;:'\",<>/?",
+		"editor.formatOnSave": true
+	},
+	"[javascript]": {
+		"editor.formatOnSave": true
+	},
+	"[json]": {
+		"editor.formatOnSave": true
+	},
+	"[php]": {
+		"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+		"editor.formatOnSave": false
+	},
+	"phpcbf.onsave": true,
+	"eslint.autoFixOnSave": true
+}
