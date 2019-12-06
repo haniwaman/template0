@@ -179,6 +179,7 @@ form {
 
 form button {
 	-webkit-appearance: none;
+	-webkit-transition: all 0.3s ease 0s;
 	background-color: #efa336;
 	background-image: none;
 	border: none;
@@ -245,6 +246,7 @@ input:focus {
 input[type="submit"],
 input[type="button"] {
 	-webkit-appearance: none;
+	-webkit-transition: all 0.3s ease 0s;
 	background-color: #efa336;
 	background-image: none;
 	border: none;
@@ -306,6 +308,7 @@ input[type="radio"] + span::before {
 }
 
 input[type="radio"] + span::after {
+	-webkit-transition: opacity 0.3s ease 0s;
 	opacity: 0;
 	transition: opacity 0.3s ease 0s;
 }
@@ -330,6 +333,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + span {
+	-webkit-transition: all 1s ease 0s;
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 16px 0 0;
@@ -354,6 +358,7 @@ input[type="checkbox"] + span::before {
 }
 
 input[type="checkbox"] + span::after {
+	-webkit-transition: opacity 0.3s ease 0s;
 	opacity: 0;
 	transition: opacity 0.3s ease 0s;
 }
@@ -401,6 +406,7 @@ select:focus {
 }
 
 .inner {
+	height: inherit;
 	margin: 0 auto;
 	max-width: 100%;
 	padding: 0;
@@ -408,12 +414,14 @@ select:focus {
 }
 
 .row {
+	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap;
 	height: inherit;
 }
 
 .row.row-middle {
+	-webkit-box-align: center;
 	align-items: center;
 }
 
@@ -428,6 +436,7 @@ select:focus {
 
 .btn {
 	-webkit-appearance: none;
+	-webkit-transition: all 0.3s ease 0s;
 	background-color: transparent;
 	background-image: none;
 	border: 2px solid #efa336;
@@ -467,6 +476,7 @@ select:focus {
 }
 
 .drawer-close {
+	-webkit-transition: all 0.3s ease 0s;
 	background: #000;
 	display: none;
 	height: 100%;
@@ -516,6 +526,7 @@ select:focus {
 }
 
 .drawer-bar {
+	-webkit-transition: all 0.3s linear 0s;
 	background: #424242;
 	border-radius: 3px;
 	display: block;
@@ -557,6 +568,7 @@ select:focus {
 
 .drawer-content {
 	-webkit-transform: translateX(105%);
+	-webkit-transition: all 0.5s ease 0s;
 	background: #fff;
 	bottom: auto;
 	color: #424242;
@@ -608,7 +620,9 @@ select:focus {
 }
 
 #header > .inner {
+	-webkit-box-align: center;
 	align-items: center;
+	display: -webkit-box;
 	display: flex;
 	height: 80px;
 	padding-bottom: 0;
@@ -620,6 +634,7 @@ select:focus {
 }
 
 .header-logo a {
+	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
 
@@ -632,7 +647,9 @@ select:focus {
 }
 
 .header-nav ul {
+	-webkit-box-align: center;
 	align-items: center;
+	display: -webkit-box;
 	display: flex;
 }
 
@@ -645,6 +662,7 @@ select:focus {
 }
 
 .header-nav li > a {
+	-webkit-transition: all 0.3s ease 0s;
 	color: #333;
 	display: block;
 	text-decoration: none;
