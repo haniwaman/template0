@@ -1,23 +1,23 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var notify = require("gulp-notify");
-var sassGlob = require("gulp-sass-glob");
-var mmq = require("gulp-merge-media-queries");
-var browserSync = require("browser-sync");
-var imagemin = require("gulp-imagemin");
-var imageminPngquant = require("imagemin-pngquant");
-var imageminMozjpeg = require("imagemin-mozjpeg");
+const gulp = require("gulp");
 
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var cssdeclsort = require("css-declaration-sorter");
+/* sass */
+const sass = require("gulp-sass");
+const plumber = require("gulp-plumber");
+const notify = require("gulp-notify");
+const sassGlob = require("gulp-sass-glob");
+const mmq = require("gulp-merge-media-queries");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssdeclsort = require("css-declaration-sorter");
 
-var ejs = require("gulp-ejs");
-var rename = require("gulp-rename");
-var replace = require("gulp-replace");
+/* browser-sync */
+const browserSync = require("browser-sync");
 
-var imageminOption = [
+/* imagemin */
+const imagemin = require("gulp-imagemin");
+const imageminPngquant = require("imagemin-pngquant");
+const imageminMozjpeg = require("imagemin-mozjpeg");
+const imageminOption = [
 	imageminPngquant({ quality: "65-80" }),
 	imageminMozjpeg({ quality: 85 }),
 	imagemin.gifsicle({
@@ -37,7 +37,7 @@ gulp.task("sass", function() {
 		.pipe(sassGlob())
 		.pipe(sass({ outputStyle: "expanded" }))
 		.pipe(postcss([autoprefixer()]))
-		.pipe(postcss([cssdeclsort({ order: "alphabetically" })]))
+		.pipe(postcss([cssdeclsort({ order: "alphabetical" })]))
 		.pipe(mmq())
 		.pipe(gulp.dest("./css"));
 });
@@ -47,8 +47,6 @@ gulp.task("watch", function(done) {
 	gulp.watch("./sass/**/*.scss", gulp.task("bs-reload"));
 	gulp.watch("./js/*.js", gulp.task("bs-reload"));
 	gulp.watch("./*.html", gulp.task("bs-reload"));
-	gulp.watch("./ejs/**/*.ejs", gulp.task("ejs"));
-	gulp.watch("./ejs/**/*.ejs", gulp.task("bs-reload"));
 });
 
 gulp.task("browser-sync", function(done) {
@@ -71,16 +69,6 @@ gulp.task("imagemin", function() {
 		.src("./img/**/*")
 		.pipe(imagemin(imageminOption))
 		.pipe(gulp.dest("./img"));
-});
-
-gulp.task("ejs", done => {
-	gulp
-		.src(["ejs/**/*.ejs", "!ejs/**/_*.ejs"])
-		.pipe(ejs({}, {}, { ext: ".html" }))
-		.pipe(rename({ extname: ".html" }))
-		.pipe(replace(/[\s\S]*?(<!DOCTYPE)/, "$1"))
-		.pipe(gulp.dest("./"));
-	done();
 });
 
 gulp.task("default", gulp.series(gulp.parallel("browser-sync", "watch")));

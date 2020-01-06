@@ -413,41 +413,20 @@ select:focus {
 	width: 1060px;
 }
 
-.row {
-	display: -webkit-box;
-	display: flex;
-	flex-wrap: wrap;
-	height: inherit;
-}
-
-.row.row-middle {
-	-webkit-box-align: center;
-	align-items: center;
-}
-
-.breadcrumb a:hover {
-	opacity: 0.6;
-}
-
-.breadcrumb span::before {
-	content: "＞";
-	margin: 0 2px;
-}
-
 .btn {
 	-webkit-appearance: none;
 	-webkit-transition: all 0.3s ease 0s;
-	background-color: transparent;
+	background-color: #424242;
 	background-image: none;
-	border: 2px solid #efa336;
+	border: 2px solid #424242;
 	border-radius: 0;
-	color: #efa336;
+	color: #fff;
 	display: inline-block;
-	font-size: 1.8rem;
+	font-size: 16px;
 	font-weight: 700;
 	height: 60px;
 	letter-spacing: 0.04em;
-	line-height: 56px;
+	line-height: 58px;
 	margin: 0;
 	position: relative;
 	text-align: center;
@@ -505,7 +484,7 @@ select:focus {
 .drawer-icon::after {
 	color: #424242;
 	content: "MENU";
-	display: block;
+	display: none;
 	font-size: 0.8rem;
 	font-weight: 700;
 	line-height: 1;
@@ -576,7 +555,7 @@ select:focus {
 	left: auto;
 	max-width: 90%;
 	overflow: auto;
-	padding-top: 80px;
+	padding-top: 60px;
 	position: fixed;
 	right: 0;
 	text-align: left;
@@ -610,23 +589,21 @@ select:focus {
 	width: 100%;
 }
 
-#header {
+.header {
 	background: #fff;
+	height: 80px;
 	left: 0;
-	position: fixed;
+	position: relative;
 	top: 0;
 	width: 100%;
 	z-index: 20;
 }
 
-#header > .inner {
+.header-content {
 	-webkit-box-align: center;
 	align-items: center;
 	display: -webkit-box;
 	display: flex;
-	height: 80px;
-	padding-bottom: 0;
-	padding-top: 0;
 }
 
 .header-logo {
@@ -654,7 +631,7 @@ select:focus {
 }
 
 .header-nav li {
-	margin-right: 16px;
+	margin-right: 46px;
 }
 
 .header-nav li:last-child {

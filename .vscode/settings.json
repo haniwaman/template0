@@ -21,5 +21,7 @@
 		"editor.formatOnSave": false
 	},
 	"phpcbf.onsave": true,
-	"eslint.autoFixOnSave": true
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": false
+	},
 }

@@ -1,18 +1,19 @@
-#header {
-	position: fixed;
+.header {
+	position: relative;
 	width: 100%;
 	background: #fff;
 	top: 0;
 	left: 0;
+	height: $header-height;
 	z-index: map-get($layer, "header");
 
 	> .inner {
-		display: flex;
-		align-items: center;
-		padding-top: 0;
-		padding-bottom: 0;
-		height: $header-height;
 	}
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
 }
 
 .header-logo {
@@ -43,7 +44,7 @@
 	}
 
 	li {
-		margin-right: 16px;
+		margin-right: 46px;
 
 		&:last-child {
 			margin-right: 0;

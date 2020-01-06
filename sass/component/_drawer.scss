@@ -1,12 +1,17 @@
 // 色
-$color-drawer-bar: #424242;
-$color-drawer-text: #424242;
-$color-content-text: #424242;
+$drawer-bar-background: #424242;
+$drawer-bar-font-color: #424242;
+$drawer-content-background: #fff;
+$drawer-content-font-color: #424242;
 
 // サイズ
 $drawer-bar-space: 5px;
 $drawer-bar-width: 25px;
 $drawer-bar-height: 3px;
+$drawer-content-width: 200px;
+
+// 表示
+$is-bar-text-show: false;
 
 .drawer {
 	z-index: map-get($layer, "drawer");
@@ -39,8 +44,13 @@ $drawer-bar-height: 3px;
 
 	&::after {
 		content: "MENU";
-		display: block;
-		color: $color-drawer-text;
+
+		@if $is-bar-text-show {
+			display: block;
+		} @else {
+			display: none;
+		}
+		color: $drawer-bar-font-color;
 		font-size: 0.8rem;
 		text-align: center;
 		line-height: 1;
@@ -69,7 +79,7 @@ $drawer-bar-height: 3px;
 	right: 0;
 	left: 0;
 	display: block;
-	background: $color-drawer-bar;
+	background: $drawer-bar-background;
 	width: 100%;
 	height: $drawer-bar-height;
 	border-radius: 3px;
@@ -114,14 +124,14 @@ $drawer-bar-height: 3px;
 	left: auto;
 	transform: translateX(105%);
 	z-index: map-get($layer, "drawer");
-	width: 200px;
+	width: $drawer-content-width;
 	max-width: 90%;
 	height: 100%;
-	background: #fff;
+	background: $drawer-content-background;
 	transition: all 0.5s ease 0s;
-	padding-top: $header-height;
+	padding-top: $header-height-sp;
 	text-align: left;
-	color: $color-content-text;
+	color: $drawer-content-font-color;
 
 	&.is-checked {
 		transform: translateX(0);
@@ -142,4 +152,7 @@ $drawer-bar-height: 3px;
 	width: 100%;
 	height: 100%;
 	max-width: 100%;
+}
+
+.drawer-content--cover {
 }

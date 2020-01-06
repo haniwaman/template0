@@ -1,19 +1,33 @@
+// 色
+$btn-background-color: #424242;
+$btn-border-color: #424242;
+$btn-font-color: #fff;
+
+// サイズ
+$btn-width: 300px;
+$btn-height: 60px;
+$btn-border-width: 1px;
+$btn-border-radius: 0;
+$btn-font-size: 16px;
+$btn-font-wight: 700;
+$btn-letter-spacing: 0.04em;
+
 .btn {
 	display: inline-block;
 	vertical-align: middle;
-	width: 300px;
-	border: 2px solid $cr-m;
-	color: $cr-m;
-	letter-spacing: 0.04em;
-	font-weight: 700;
-	line-height: (60px - 2px * 2);
-	height: 60px;
+	width: $btn-width;
+	border: 2px solid $btn-border-color;
+	color: $btn-font-color;
+	letter-spacing: $btn-letter-spacing;
+	font-weight: $btn-font-wight;
+	line-height: ($btn-height - $btn-border-width * 2);
+	height: $btn-height;
 	margin: 0;
 	background-image: none;
-	background-color: transparent;
+	background-color: $btn-background-color;
 	text-decoration: none;
-	border-radius: 0;
-	font-size: 1.8rem;
+	border-radius: $btn-border-radius;
+	font-size: $btn-font-size;
 	text-align: center;
 	-webkit-appearance: none;
 	position: relative;
