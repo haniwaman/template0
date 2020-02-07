@@ -33,16 +33,16 @@
 
 
 <div class="header-drawer">
-	<div class="drawer-content">
-		<div class="drawer-icon js-drawer for-drawer" data-target="for-drawer">
-			<div class="drawer-bars">
-					<span class="drawer-bar"></span>
-					<span class="drawer-bar"></span>
-					<span class="drawer-bar"></span>
-			</div>
-		</div>
-		<div class="drawer-close js-drawer for-drawer"></div>
-		<div class="drawer-content for-drawer">
+	<div class="drawer">
+		<button class="drawer-icon js-drawer for-drawer" type="button" data-target="for-drawer" aria-controls="drawer-content1" aria-expanded="false">
+			<span class="drawer-bars">
+				<span class="drawer-bar"></span>
+				<span class="drawer-bar"></span>
+				<span class="drawer-bar"></span>
+			</span>
+		</button>
+		<div class="drawer-bg for-drawer"></div>
+		<div id="drawer-content1" class="drawer-content for-drawer" aria-hidden="true">
 			コンテンツ部分
 		</div><!-- /drawer-content -->
 	</div><!-- /drawer -->
