@@ -16,6 +16,7 @@ $btn-letter-spacing: 0.04em;
 	display: inline-block;
 	vertical-align: middle;
 	width: $btn-width;
+	max-width: 100%;
 	border: 2px solid $btn-border-color;
 	color: $btn-font-color;
 	letter-spacing: $btn-letter-spacing;
