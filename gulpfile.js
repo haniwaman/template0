@@ -18,7 +18,7 @@ const imagemin = require("gulp-imagemin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminMozjpeg = require("imagemin-mozjpeg");
 const imageminOption = [
-	imageminPngquant({ quality: "65-80" }),
+	imageminPngquant({ quality: [0.65, 0.8] }),
 	imageminMozjpeg({ quality: 85 }),
 	imagemin.gifsicle({
 		interlaced: false,
