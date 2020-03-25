@@ -25,7 +25,7 @@ const imageminOption = [
 		optimizationLevel: 1,
 		colors: 256
 	}),
-	imagemin.jpegtran(),
+	imagemin.mozjpeg(),
 	imagemin.optipng(),
 	imagemin.svgo()
 ];
