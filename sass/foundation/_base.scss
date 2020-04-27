@@ -25,6 +25,8 @@ body {
 	background: $cr-bg;
 	overflow-x: hidden;
 	overflow-wrap: break-word;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 }
 
 article,
